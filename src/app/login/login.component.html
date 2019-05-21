@@ -1,0 +1,49 @@
+
+
+<div class=" bg" >
+    <div class="row ">
+        <div class="col-lg-4 col-md-3 col-sm-2 col-xs-12"></div>
+        <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12  form-container" >
+            <form class="jumbotron mrg-reg-top"  #loginForm="ngForm" novalidate>
+            <h1 class="hh">Sign In</h1>
+            <div  align="center">
+              <label >E-mail<span class="danger">*</span></label>
+              <input class="reg-mail"  type="text" #email="ngModel" name="email" id="email" 
+              placeholder="example@gmail.com"  pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"    [(ngModel)]="loginObj.email"
+              autocomplete="off" required>
+              <div *ngIf = "email?.touched || email?.dirty" class="danger">
+                 <div *ngIf = "email.errors?.required">email required</div>
+                 <div *ngIf="email.errors?.pattern">invalid email</div>
+               </div>
+            </div>
+            <!-- pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"  -->
+   <div align="center">
+     <label >Password<span class="danger">*</span></label>
+     <input  class="reg-pswd" [type]="passwordType"   #password="ngModel" name="password" id="password"  
+     placeholder="Password" maxlength="12" minlength="3" pattern="[a-zA-Z0-9!@#$%^&*()]{3,12}"
+      [(ngModel)]="loginObj.password"  autocomplete="off" required>
+     <i class="fa fa-eye-slash reg-eye" (click)="togglePassword()"></i>
+     <div *ngIf = "password?.touched || password?.dirty" class="danger">
+        <div  style="margin-left: 31px; "*ngIf = "password.errors?.required">password required</div>
+        <div style="margin-left: 73px; " *ngIf="password.errors?.pattern">Should have 3 to 12 letter</div>
+     </div>
+   </div>
+  
+   <div align="center" class=" lgn-success-btn">
+    <button   type="button" class="btn btn-success" (click)="login()"  [disabled]="!loginForm.valid">Login</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button   type="button" class="btn btn-success" (click)="cancel(); loginForm.reset();">Cancel</button>
+  
+  </div>
+  <div class="registerinbox " align="center">
+      <p> Don't have an account?<a class="btn " routerLink="/registration"
+          routerLinkActive="active">Register Here</a></p>
+    </div>
+  </form>
+        </div>
+        <div class="col-lg-4 col-md-3 col-sm-2 col-xs-12"></div>
+    </div>
+     
+  </div>
+  
+  
+  

@@ -1,0 +1,51 @@
+.bg{
+
+	background: url('/assets/images/backgrd.jpg');
+	  background-repeat: no-repeat;
+    background-size: 100% 100%;
+   height: 659px;
+   margin: 0px auto 0;
+   position: relative;
+} 
+
+.mrg-reg-top{
+  margin-top: 5em;
+}
+.hh{
+  margin-top: -41px;
+  padding-bottom: 23px;
+  color: #dec332;
+  text-align: center;
+}
+
+.mrg-reg-top{
+  margin-top: 5em;
+}
+.hh{
+  margin-top: -41px;
+  padding-bottom: 23px;
+  color: #dec332;
+  text-align: center;
+}
+.lgn-success-btn{
+    margin-top: 27px;
+  }
+
+ .reg-mail{
+  margin-top: 10px;margin-left: 39px;
+ } 
+ .reg-pswd{
+  margin-top: 10px;margin-left: 15px;
+ }
+.reg-eye{
+  position: absolute;
+    margin-left: -34px;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #1961a9;
+}
+.registerinbox{
+  color:#385068;
+  margin-top: 20px;
+}
+ 

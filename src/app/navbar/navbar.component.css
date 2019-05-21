@@ -1,0 +1,31 @@
+.img{
+    background:url('/assets/images/er.jpg');
+    }
+nav a {
+    
+    background-color: #f8f9fa;
+    padding: 10px;
+}
+.nav-head{
+    font-family: cursive !important;
+    font-size: 29px !important;
+}
+
+.user-icon{
+    font-size: 30px;
+    color: #dec332;
+    padding: 8px;
+}
+.hd{
+  
+    color: #01e1eb;
+    font-family: -webkit-body;
+    }
+
+    .hd1{
+        margin-top: 10px;
+        padding-left: 10px !important;
+        margin-left: 14px !important;
+        color: #979596;
+        font-family: -webkit-body;
+    }

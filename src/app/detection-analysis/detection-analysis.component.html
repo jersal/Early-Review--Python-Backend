@@ -1,0 +1,97 @@
+
+
+
+  <mat-tab-group>
+  <mat-tab label="Spam Detection">
+    <ng-template matTabContent>
+      <div class="container"><table class="table" >
+          <thead>
+          
+            <tr>
+              <th>SL No</th>
+              <th>Product Name</th>
+              <th>Review ID</th>
+              <th>Reviewer Name</th>
+              <th>Reviewer Text</th>
+              <th>Overall Rating</th>
+              <th>Summary</th>
+              <th>Date of Review</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tbody>
+            <tr style="background: #01e1eb;" *ngFor="let item of spamDetec; let i=index ">
+              <td>{{i+1}}</td>
+              <td>{{item.product_name}}</td>
+              <td>{{item.reviewer_id}}</td>
+              <td>{{item.reviewer_name}}</td>
+              <td>{{item.review_text}}</td>
+              <td>{{item.overall_rating}}</td>
+              <td>{{item.summary_product}}</td>
+              <td>{{item.date_review}}</td>
+
+            </tr>
+            <!-- <tr style="background: #9e9c9d;">
+              <td>1</td>
+              <td>product_name</td>
+              <td>reviewer_id</td>
+              <td>reviewer_name</td>
+              <td>review_text</td>
+              <td>overall_rating</td>
+              <td>summary_product</td>
+              <td>date_review</td>
+
+            </tr>
+            <tr style="background: #0cf569;">
+              <td> 1</td>
+              <td>product_name</td>
+              <td>reviewer_id</td>
+              <td>reviewer_name</td>
+              <td>review_text</td>
+              <td>overall_rating</td>
+              <td>summary_product</td>
+              <td>date_review</td>
+
+            </tr> -->
+          </tbody>
+        </table></div>
+        
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Early Review Program">
+    <ng-template matTabContent>
+        <app-early-pgm></app-early-pgm>
+          </ng-template>
+  </mat-tab>
+  <mat-tab label="Sentimental Analysis">
+      <ng-template matTabContent>
+<div class="container"> <table class="table" >
+    <thead>
+      <tr>
+        <th>SL No</th>
+        <th>Product Name</th>
+        <th>Review ID</th>
+        <th>Reviewer Name</th>
+        <th>Reviewer Text</th>
+        <th>Predicted</th>
+        <th> Sentiment Probability</th>
+  
+      </tr>
+    </thead>
+    <tbody>
+    <tbody>
+      <tr >
+        <td>1</td>
+        <td>product_name</td>
+        <td>reviewer_id</td>
+        <td>reviewer_name</td>
+        <td>review_text</td>
+        <td>overall_rating</td>
+        <td>summary_product</td>
+
+      </tr>
+     
+    </tbody>
+  </table>    </div>  </ng-template>
+    </mat-tab>
+</mat-tab-group>

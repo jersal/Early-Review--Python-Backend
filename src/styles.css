@@ -1,1 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*import font awesome */
+@import "~font-awesome/css/font-awesome.css";
+/* @import '~bootstrap/dist/css/bootstrap.min.css'; */
+
+/*toaster*/
+@import "~ngx-toastr/toastr.css";
+/*toast over ride styles*/
+
+.toast-success {
+  background-color: #6eca6e;
+}
+.toast-error {
+  background-color: #e25f58;
+}
+.toast-warning {
+  background-color: #e2c940;
+}
+.toast-info {
+  background-color: #8e89dc;
+}
+
+nav a{
+    color: #039be5;
+    background-color: #CFD8DC;
+    padding: 10px;
+}
+
+   input{
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  } 
+ .btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+}
+
+.danger{
+    color: red;
+    padding-left: 10px;
+}
+
+.btn-success.active[disabled], .btn-success.disabled, .btn-success.disabled.active, .btn-success.disabled:active, .btn-success.disabled:focus, .btn-success.disabled:hover, .btn-success[disabled], .btn-success[disabled]:active, .btn-success[disabled]:focus, .btn-success[disabled]:hover, fieldset[disabled] .btn-success, fieldset[disabled] .btn-success.active, fieldset[disabled] .btn-success:active, fieldset[disabled] .btn-success:focus, fieldset[disabled] .btn-success:hover{
+  background: #5cb85c;
+  opacity:.90;
+  border-color:#5cb85c;
+  cursor: not-allowed;
+}

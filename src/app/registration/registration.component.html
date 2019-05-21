@@ -1,0 +1,48 @@
+<div class=" bg" >
+  <div class="row ">
+      <div class="col-lg-4 col-md-3 col-sm-2 col-xs-12"></div>
+      <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12  form-container" >
+          <form class="jumbotron mrg-reg-top"  #regForm="ngForm" novalidate>
+          <h1 class="hh">Sign Up</h1>
+           <div align="center">
+ <label >User Name<span class="danger">*</span></label>&nbsp;&nbsp;
+ <input type="text" placeholder="Name" #username="ngModel" id="username" name="username" [(ngModel)]="user.username"
+ pattern="[a-zA-Z ]*"  autocomplete="off" required>
+ <div *ngIf = "username?.touched || username?.dirty" class="danger">
+  <div  style="margin-left: 31px;"*ngIf = "username.errors?.required">username required</div>
+  <div *ngIf="username.errors?.pattern">invalid name</div>
+</div>
+</div>
+ <div  align="center">
+   <label >E-mail<span class="danger">*</span></label>
+   <input class="reg-mail"  type="text" #email="ngModel" name="email" id="email" placeholder="example@gmail.com"  [(ngModel)]="user.email"
+   pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"  autocomplete="off" required>
+   <div *ngIf = "email?.touched || email?.dirty" class="danger">
+      <div *ngIf = "email.errors?.required">email required</div>
+      <div *ngIf="email.errors?.pattern">invalid email</div>
+    </div>
+ </div>
+ <div align="center">
+   <label >Password<span class="danger">*</span></label>
+   <input  class="reg-pswd" [type]="passwordType"   #password="ngModel" name="password" id="password"  
+   placeholder="Password" maxlength="12" minlength="8" pattern="[a-zA-Z0-9!@#$%^&*()]{8,12}" [(ngModel)]="user.password"  autocomplete="off" required>
+   <i class="fa fa-eye reg-eye" (click)="togglePassword()"></i>
+   <div *ngIf = "password?.touched || password?.dirty" class="danger">
+      <div  style="margin-left: 31px; "*ngIf = "password.errors?.required">password required</div>
+      <div style="margin-left: 73px; " *ngIf="password.errors?.pattern">Should have 8 to 12 letter</div>
+   </div>
+ </div>
+
+ <div align="center" class=" lgn-success-btn">
+  <button   type="button" class="btn btn-success" (click)="register(regForm) " [disabled]="!regForm.valid">Register</button>&nbsp;&nbsp;&nbsp;&nbsp;
+  <button   type="button" class="btn btn-success" (click)="cancel();regForm.reset();">Cancel</button>
+
+</div>
+</form>
+      </div>
+      <div class="col-lg-4 col-md-3 col-sm-2 col-xs-12"></div>
+  </div>
+   
+</div>
+
+
